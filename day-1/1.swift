@@ -3,7 +3,6 @@ import Foundation
 let input = try! String(contentsOf: URL(filePath: "./input-1.txt"), encoding: .utf8)
 
 func calibrator(input: String) -> String {
-  var result = 0
   let lines = input.split(separator: "\n")
   let numbers = lines.map {
     line in
@@ -12,7 +11,7 @@ func calibrator(input: String) -> String {
     line.forEach {
       char in
       if char.isNumber {
-        if let num = firstNum {
+        if firstNum != nil {
           lastNum = Int(String(char))
         } else {
           firstNum = Int(String(char))
