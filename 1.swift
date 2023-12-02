@@ -1,6 +1,6 @@
 import Foundation
 
-let input = try! String(contentsOf: URL(filePath: "./input-1.txt"), encoding: .utf8)
+let input = try! String(contentsOf: URL(filePath: "./inputs/input-1.txt"), encoding: .utf8)
 
 func calibrator(input: String) -> String {
   let lines = input.split(separator: "\n")
