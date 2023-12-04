@@ -27,7 +27,6 @@ for (offset, line) in input.split(separator: "\n").enumerated() {
   }
   result += sum
   cardInstances += cardWins
-
 }
 
 var numberCounts: [Int: Int] = [:]
@@ -36,4 +35,7 @@ for number in cardInstances {
   numberCounts[number, default: 0] += 1
 }
 
-print(result, numberCounts.values.reduce(0, +))
+let part1 = result
+let part2 = numberCounts.values.reduce(0, +)
+
+print(part1, part2)
